@@ -2,7 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "@/views/LoginView.vue";
 import Test from "@/views/TestMad.vue";
 import Footer from "@/components/Footer.vue";
-import HeaderComponent from "@/components/HeaderComponent.vue";
+import HomeView from "@/views/HomeView.vue";
+import HeaderAuthor from "@/components/HeaderAuthor.vue";
+import AuthorHomeView from "@/views/AuthorHomeView.vue";
+import RegisterView from "@/views/RegisterView.vue";
 
 // const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +32,22 @@ const router = createRouter({
     {
       path: "/",
       name: "/",
-      component: HeaderComponent,
+      component: HomeView,
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginView,
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: RegisterView,
+    },
+    {
+      path: "/author/profile",
+      name: "authorProfile",
+      component: AuthorHomeView,
     },
   ],
 });

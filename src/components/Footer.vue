@@ -2,7 +2,7 @@
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import images from "@/assets/images/index";
+import { images } from "@/assets/images/index";
 </script>
 
 <template>
@@ -59,11 +59,15 @@ import images from "@/assets/images/index";
   flex-direction: column;
   align-items: center;
 }
+
 .info-section {
   display: grid;
   margin-bottom: 10px;
   grid-template-columns: auto auto auto auto auto;
   grid-column-gap: 50px;
+}
+p {
+  padding-top: 5px;
 }
 
 .info-bold {
