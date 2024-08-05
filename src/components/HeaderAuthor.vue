@@ -1,15 +1,22 @@
 <script setup>
-import { images } from "@/assets/images";
+import { images, icons } from "@/assets/images";
+
+const props = defineProps({ color: String });
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :style="{ backgroundColor: props.color }">
     <div class="inner">
       <div class="logo">
-        <p>Kênh cho tác giả</p>
+        <img :src="images.library" />
+        <p>KÊNH CHO TÁC GIẢ</p>
       </div>
       <div class="actions">
-        <a href="aaa">Trang chủ cộng đồng</a>
+        <a href="/">
+          <img :src="icons.penIconSolid" class="icon" /><span
+            >Trang chủ cộng đồng</span
+          >
+        </a>
         <button><img :src="images.avatar" /><span>Quân Nguyễn</span></button>
       </div>
     </div>
@@ -34,6 +41,18 @@ import { images } from "@/assets/images";
   padding: 15px 15px;
 }
 
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  img {
+    object-fit: cover;
+    height: 200%;
+    width: 100px;
+  }
+}
+
 .actions {
   display: flex;
   justify-content: center;
@@ -44,6 +63,12 @@ import { images } from "@/assets/images";
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+  }
+
+  a {
+    display: inline-block;
+    display: flex;
+    align-items: center;
   }
 }
 

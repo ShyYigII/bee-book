@@ -14,6 +14,18 @@ import book5 from "@/assets/images/books-cover/5.jpeg";
 import book6 from "@/assets/images/books-cover/6.jpeg";
 import book7 from "@/assets/images/books-cover/7.jpeg";
 import book8 from "@/assets/images/books-cover/8.jpeg";
+import author1 from "@/assets/images/authors/1.jpeg";
+import author2 from "@/assets/images/authors/2.jpeg";
+import author3 from "@/assets/images/authors/3.jpeg";
+import author4 from "@/assets/images/authors/4.jpeg";
+import new1 from "@/assets/images/news/1.jpeg";
+import new2 from "@/assets/images/news/2.jpeg";
+import new3 from "@/assets/images/news/3.jpeg";
+
+import penIconSolid from "@/assets/images/icon-svg/pen-solid.svg";
+import redCircle from "@/assets/images/icon-svg/circle-red.svg";
+import list from "@/assets/images/icon-svg/list.svg";
+import heart from "@/assets/images/icon-svg/heart.svg";
 
 const images = {
   loginImage,
@@ -37,4 +49,19 @@ const books = {
   book8,
 };
 
-export { images, books };
+const authors = {
+  author1,
+  author2,
+  author3,
+  author4,
+};
+
+const news = {
+  new1,
+  new2,
+  new3,
+};
+
+const icons = { penIconSolid, redCircle, list, heart };
+
+export { images, books, authors, news, icons };

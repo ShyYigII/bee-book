@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginView from "@/views/LoginView.vue";
-import Test from "@/views/TestMad.vue";
-import Footer from "@/components/Footer.vue";
 import HomeView from "@/views/HomeView.vue";
-import HeaderAuthor from "@/components/HeaderAuthor.vue";
-import AuthorHomeView from "@/views/AuthorHomeView.vue";
+import AuthorProfileView from "@/views/AuthorView/AuthorProfileView.vue";
 import RegisterView from "@/views/RegisterView.vue";
+import EBookView from "@/views/EBookView.vue";
+import AuthorBookView from "@/views/AuthorView/AuthorBookView.vue";
 
 // const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,7 +46,17 @@ const router = createRouter({
     {
       path: "/author/profile",
       name: "authorProfile",
-      component: AuthorHomeView,
+      component: AuthorProfileView,
+    },
+    {
+      path: "/ebook",
+      name: "ebook",
+      component: EBookView,
+    },
+    {
+      path: "/author/myBook",
+      name: "authorBook",
+      component: AuthorBookView,
     },
   ],
 });

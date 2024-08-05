@@ -40,15 +40,15 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 <style lang="scss" scoped>
 .wrapper {
   background-color: #fff;
-  height: 500px;
+  height: 400px;
   width: 20vw;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .inner {
   height: 100%;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -58,15 +58,17 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 40%;
+  margin-bottom: 40px;
 
   & img {
     border-radius: 50%;
-    height: 200px;
+    height: 100%;
     margin-bottom: 20px;
   }
 
   & h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
   }
 }
@@ -74,12 +76,12 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 .link {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-weight: 500;
   padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
 
   span {
-    font-size: 2.2rem;
     display: inline-block;
     padding: 12px;
   }
@@ -88,7 +90,7 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
     color: #ec711a;
   }
   .icon {
-    font-size: 2.5rem;
+    margin-right: 5px;
   }
 }
 

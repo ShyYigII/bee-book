@@ -1,14 +1,18 @@
 <script setup>
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+const props = defineProps({ color: String });
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :style="{ backgroundColor: props.color }">
     <div class="inner">
-      <div class="logo">BEEBOOK</div>
+      <div>
+        <a href="/" class="logo-libraby">LIBRARY</a>
+      </div>
       <div class="books-category">
-        <a href="a">Sách điện tử</a>
+        <a href="/ebook">Sách điện tử</a>
         <a href="a">Sách nói</a>
         <a href="a">Sách tóm tắt</a>
         <a href="a">Sách thể loại</a>
@@ -28,7 +32,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 <style lang="scss" scoped>
 .wrapper {
   height: 60px;
-  background-color: var(--color-secondary);
+  /* background-color: var(--color-secondary); */
   position: fixed;
   top: 0;
   left: 0;
@@ -44,14 +48,21 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   padding: 15px 15px;
 }
 
+.logo-libraby {
+  font-family: "Inknut Antiqua", "IBM Plex Sans";
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
 .books-category {
   a {
     padding: 10px 30px;
     color: #000;
     text-decoration: none;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     display: inline-block;
+
     &:hover {
       color: #fff;
     }
@@ -83,6 +94,7 @@ input {
   outline: none;
   &::placeholder {
     color: var(--color-font-search);
+    font-size: smaller;
   }
 }
 
