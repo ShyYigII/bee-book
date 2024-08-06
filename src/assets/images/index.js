@@ -6,6 +6,9 @@ import dowloadGooglePlayButton from "@/assets/images/GetItOnGooglePlay_Badge_Web
 import avatar from "@/assets/images/avatar.png";
 import library from "@/assets/images/library.png";
 import panel from "@/assets/images/panel.jpeg";
+import panel2 from "@/assets/images/panel2.jpeg";
+import panel3 from "@/assets/images/panel3.jpeg";
+
 import book1 from "@/assets/images/books-cover/1.jpeg";
 import book2 from "@/assets/images/books-cover/2.jpeg";
 import book3 from "@/assets/images/books-cover/3.jpeg";
@@ -44,6 +47,8 @@ const images = {
   library,
   panel,
   solidColor,
+  panel2,
+  panel3,
 };
 
 const books = {
