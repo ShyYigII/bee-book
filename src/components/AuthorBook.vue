@@ -10,7 +10,7 @@ import MyBook from "./MyBook.vue";
         <span>
           <img :src="icons.penIconSolid" class="icon" /> TRUYỆN CỦA TÔI</span
         >
-        <button>+ Thêm truyện mới</button>
+        <a href="myBook/newbook"><button>+ Thêm truyện mới</button></a>
       </div>
       <MyBook />
     </div>

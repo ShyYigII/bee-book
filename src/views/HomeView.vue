@@ -24,7 +24,7 @@ console.log(authors.author1);
     <p>Sách miễn phí</p>
     <div class="bookshelf">
       <div v-for="book in books1" :key="book.charAt(0)" class="compartment">
-        <img :src="book" />
+        <a href="/book/1"> <img :src="book" /></a>
         <p>{{ book.charAt(book.length - 6) }}</p>
       </div>
     </div>

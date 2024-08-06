@@ -2,14 +2,14 @@
 import HeaderAuthor from "@/components/HeaderAuthor.vue";
 import AuthorSidebar from "@/components/AuthorSidebar.vue";
 import Footer from "@/components/Footer.vue";
-import AuthorBook from "@/components/AuthorBook.vue";
+import NewBook1 from "@/components/NewBook1.vue";
 </script>
 
 <template>
   <HeaderAuthor />
   <div class="content">
     <AuthorSidebar />
-    <AuthorBook />
+    <NewBook1 />
   </div>
   <Footer />
 </template>

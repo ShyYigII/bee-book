@@ -16,7 +16,6 @@ import AuthorProfile from "@/components/AuthorProfile.vue";
 
 <style scoped lang="scss">
 .content {
-  height: 100vh;
   background-color: var(--color-author-background);
   padding: 100px;
   display: flex;

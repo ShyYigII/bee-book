@@ -26,6 +26,13 @@ import penIconSolid from "@/assets/images/icon-svg/pen-solid.svg";
 import redCircle from "@/assets/images/icon-svg/circle-red.svg";
 import list from "@/assets/images/icon-svg/list.svg";
 import heart from "@/assets/images/icon-svg/heart.svg";
+import facebook from "@/assets/images/icon-svg/facebook.svg";
+import twitter from "@/assets/images/icon-svg/twitter.svg";
+import pinterest from "@/assets/images/icon-svg/pinterest.svg";
+import tiktok from "@/assets/images/icon-svg/tiktok.svg";
+import more from "@/assets/images/icon-svg/more.svg";
+
+import solidColor from "@/assets/images/solid-color-image.png";
 
 const images = {
   loginImage,
@@ -36,6 +43,7 @@ const images = {
   avatar,
   library,
   panel,
+  solidColor,
 };
 
 const books = {
@@ -62,6 +70,16 @@ const news = {
   new3,
 };
 
-const icons = { penIconSolid, redCircle, list, heart };
+const icons = {
+  penIconSolid,
+  redCircle,
+  list,
+  heart,
+  facebook,
+  twitter,
+  pinterest,
+  tiktok,
+  more,
+};
 
 export { images, books, authors, news, icons };

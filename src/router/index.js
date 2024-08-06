@@ -5,6 +5,9 @@ import AuthorProfileView from "@/views/AuthorView/AuthorProfileView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import EBookView from "@/views/EBookView.vue";
 import AuthorBookView from "@/views/AuthorView/AuthorBookView.vue";
+import AuthorNewBook from "@/views/AuthorView/AuthorNewBook.vue";
+import BookInfoView from "@/views/BookInfoView.vue";
+import BookReadView from "@/views/BookReadView.vue";
 
 // const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
@@ -57,6 +60,28 @@ const router = createRouter({
       path: "/author/myBook",
       name: "authorBook",
       component: AuthorBookView,
+      // children: [
+      //   {
+      //     path: "newBook",
+      //     name: "newBook",
+      //     component: AuthorNewBook,
+      //   },
+      // ],
+    },
+    {
+      path: "/author/mybook/newbook",
+
+      component: AuthorNewBook,
+    },
+    {
+      path: "/book/:bookId",
+
+      component: BookInfoView,
+    },
+    {
+      path: "/read/:bookId",
+
+      component: BookReadView,
     },
   ],
 });

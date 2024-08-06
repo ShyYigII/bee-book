@@ -14,23 +14,26 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
         <h1>Quân Nguyễn</h1>
       </div>
       <div class="link">
-        <RouterLink to="/author/profile" exactActiveClass>
+        <RouterLink to="/author/profile">
           <span>
             <FontAwesomeIcon :icon="faUserCircle" class="icon" />
             Hồ sơ tác giả
           </span>
+          <span class="float-end"> > </span>
         </RouterLink>
-        <RouterLink to="/author/myBook" exactActiveClass>
+        <RouterLink to="/author/myBook">
           <span
             ><FontAwesomeIcon :icon="faBookmark" class="icon" />
             Truyện của tôi
           </span>
+          <span class="float-end"> > </span>
         </RouterLink>
-        <RouterLink to="/login" exactActiveClass>
+        <RouterLink to="/login" activeClass>
           <span
             ><FontAwesomeIcon :icon="faArrowRightFromBracket" class="icon" />
             Đăng xuất
           </span>
+          <span class="float-end"> > </span>
         </RouterLink>
       </div>
     </div>
@@ -91,6 +94,10 @@ import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
   }
   .icon {
     margin-right: 5px;
+  }
+
+  .float-end {
+    float: right;
   }
 }
 

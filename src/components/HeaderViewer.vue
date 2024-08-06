@@ -1,8 +1,15 @@
 <script setup>
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { ref } from "vue";
 
 const props = defineProps({ color: String });
+const isShowSideBarList = ref(true);
+const isShowSideBar = ref(false);
+
+const showSideBar = () => {
+  isShowSideBar.value = !isShowSideBar.value;
+};
 </script>
 
 <template>
@@ -15,7 +22,24 @@ const props = defineProps({ color: String });
         <a href="/ebook">Sách điện tử</a>
         <a href="a">Sách nói</a>
         <a href="a">Sách tóm tắt</a>
-        <a href="a">Sách thể loại</a>
+        <a href="a">Thể loại</a>
+      </div>
+
+      <div style="position: relative">
+        <div class="books-category-sidebar" v-if="isShowSideBar">
+          <a href="#" @click="showSideBar"><FontAwesomeIcon :icon="faX" /></a>
+          <a href="/ebook">Sách điện tử</a>
+          <a href="a">Sách nói</a>
+          <a href="a">Sách tóm tắt</a>
+          <a href="a">Thể loại</a>
+        </div>
+        <a href="#" @click="showSideBar">
+          <FontAwesomeIcon
+            :icon="faBars"
+            v-if="isShowSideBarList"
+            class="list-icon"
+          />
+        </a>
       </div>
       <div class="actions">
         <div class="search">
@@ -64,7 +88,7 @@ const props = defineProps({ color: String });
     display: inline-block;
 
     &:hover {
-      color: #fff;
+      /* color: #fff; */
     }
   }
 }
@@ -111,6 +135,51 @@ button {
   &.login {
     border-color: var(--color-primary-bold);
     background-color: var(--color-primary);
+  }
+}
+
+.books-category-sidebar {
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10%);
+  height: auto;
+  width: 200px;
+  background-color: var(--color-secondary);
+  z-index: 1001;
+  color: #000;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  a {
+    padding: 10px 30px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+}
+
+.list-icon {
+  display: none;
+}
+
+@media (max-width: 1190px) {
+  .books-category {
+    a {
+      padding: 5px 5px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .books-category {
+    display: none;
+  }
+  .list-icon {
+    display: block;
   }
 }
 </style>
