@@ -5,9 +5,10 @@ import downloadAppStoreButton from "@/assets/images/appStoreDownloadBadge.png";
 import dowloadGooglePlayButton from "@/assets/images/GetItOnGooglePlay_Badge_Web_color_English.png";
 import avatar from "@/assets/images/avatar.png";
 import library from "@/assets/images/library.png";
-import panel from "@/assets/images/panel.jpeg";
-import panel2 from "@/assets/images/panel2.jpeg";
-import panel3 from "@/assets/images/panel3.jpeg";
+import panel from "@/assets/images/panel1.png";
+import panel2 from "@/assets/images/panel2.png";
+import panel3 from "@/assets/images/panel3.png";
+import panel4 from "@/assets/images/panel4.png";
 
 import book1 from "@/assets/images/books-cover/1.jpeg";
 import book2 from "@/assets/images/books-cover/2.jpeg";
@@ -49,6 +50,7 @@ const images = {
   solidColor,
   panel2,
   panel3,
+  panel4,
 };
 
 const books = {

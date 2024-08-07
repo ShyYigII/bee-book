@@ -15,6 +15,19 @@ const handleFileChange = (e) => {
   <div class="wrapper">
     <div class="inner">
       <div class="progress">Progress</div>
+      <!-- <v-stepper alt-labels :items="['Step 1', 'Step 2', 'Step 3']">
+        <template v-slot:item.1>
+          <v-card title="Step One" flat>abc</v-card>
+        </template>
+
+        <template v-slot:item.2>
+          <v-card title="Step Two" flat>vcz</v-card>
+        </template>
+
+        <template v-slot:item.3>
+          <v-card title="Step Three" flat>...</v-card>
+        </template>
+      </v-stepper> -->
       <div class="new-book-form">
         <div class="choose-image">
           <img :src="url ? url : images.solidColor" />

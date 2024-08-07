@@ -135,13 +135,13 @@ setInterval(() => {
 //slider
 
 .slider {
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   width: 100%;
 }
 
 .slides {
-  height: 400px;
+  height: 450px;
   display: flex;
   width: 300%;
 
@@ -156,6 +156,8 @@ setInterval(() => {
 
   img {
     width: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
 
   /* img {

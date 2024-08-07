@@ -8,6 +8,7 @@ import AuthorBookView from "@/views/AuthorView/AuthorBookView.vue";
 import AuthorNewBook from "@/views/AuthorView/AuthorNewBook.vue";
 import BookInfoView from "@/views/BookInfoView.vue";
 import BookReadView from "@/views/BookReadView.vue";
+import MyLibraryView from "@/views/MyLibraryView.vue";
 
 // const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
@@ -82,6 +83,11 @@ const router = createRouter({
       path: "/read/:bookId",
 
       component: BookReadView,
+    },
+    {
+      path: "/myLibrary",
+
+      component: MyLibraryView,
     },
   ],
 });

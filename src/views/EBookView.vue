@@ -26,9 +26,11 @@ const summary = `Vừa tỉnh dậy, đại lão Doanh Tử Khâm trở thành c
           {{ summary }}
         </p>
         <div class="fav">
-          <button class="fa-read">
-            <FontAwesomeIcon :icon="faBook" class="icon" />Đọc sách
-          </button>
+          <a href="/book/1">
+            <button class="fa-read">
+              <FontAwesomeIcon :icon="faBook" class="icon" />Đọc sách
+            </button>
+          </a>
           <button class="fa-heart">
             <FontAwesomeIcon :icon="faHeart" class="icon" />
           </button>
