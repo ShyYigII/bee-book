@@ -1,5 +1,5 @@
 <script setup>
-import HeaderViewer from "@/components/HeaderViewer.vue";
+import HeaderViewer from "@/components/HeaderViewer/HeaderViewer.vue";
 import { faCaretDown, faPlus, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { books, icons } from "@/assets/images";
@@ -162,44 +162,44 @@ const chapters = ["Chương 1: Đây không phải truyện niên đại"];
       style="
         display: flex;
         justify-content: center;
-        width: 50%;
+        width: 60%;
         margin-top: 20px;
         margin-bottom: 10px;
       "
     >
       <div style="width: 100%; display: flex; justify-content: space-between">
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Library độc quyền</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Thử dùng gói cao cấp</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Tải ứng dụng</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Ngôn ngữ</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Các tác giả</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Hợp tác thương hiệu</a
         >
         <a
-          style="font-size: 1.4rem; margin-right: 5px; font-weight: 600"
+          style="font-size: 1.1rem; margin-right: 5px; font-weight: 600"
           href="#"
           >Công việc</a
         >
@@ -209,7 +209,7 @@ const chapters = ["Chương 1: Đây không phải truyện niên đại"];
       <a
         v-for="(a, index) in aArray"
         :key="index"
-        style="font-size: 1.3rem; margin-right: 10px; color: #999999"
+        style="font-size: 1rem; margin-right: 10px; color: #999999"
         href="#"
         >{{ a }}</a
       >
@@ -218,93 +218,5 @@ const chapters = ["Chương 1: Đây không phải truyện niên đại"];
 </template>
 
 <style scoped lang="scss">
-.content {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40px;
-}
-
-.catalogue {
-  padding: 20px 40px;
-  color: black;
-}
-
-.panel {
-  display: flex;
-  background-color: var(--color-secondary);
-  height: 270px;
-  width: 100%;
-  align-items: center;
-  padding: 20px 50vh;
-  margin-bottom: 40px;
-  justify-content: center;
-
-  img {
-    height: 90%;
-    object-fit: cover;
-  }
-}
-
-.plus-button {
-  border-radius: 10px;
-  width: auto;
-  background: #ff7512;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  aspect-ratio: 1/1;
-  height: 90%;
-}
-
-.contained {
-  border: none;
-  color: white;
-  background-color: black;
-  padding: 10px 60px;
-  border-radius: 30px;
-  width: 47.5%;
-
-  &:first-child {
-    margin-right: 5%;
-  }
-}
-
-.share {
-  img {
-    margin-left: 5px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.bookshelf {
-  padding: 10px 20px;
-  width: 80%;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
-  margin-bottom: 40px;
-
-  & p {
-    align-self: flex-start;
-    margin-top: 10px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    margin-left: 0;
-  }
-}
-
-.compartment {
-  height: 200px;
-  width: 10%;
-
-  img {
-    height: 100%;
-    border-radius: 10px;
-  }
-}
+@import url("./BookReadView.scss");
 </style>

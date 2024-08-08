@@ -1,23 +1,3 @@
-<script setup>
-import { icons } from "@/assets/images";
-import MyBook from "./MyBook.vue";
-</script>
-
-<template>
-  <div class="wrapper">
-    <div class="inner">
-      <div class="new-book">
-        <span>
-          <img :src="icons.penIconSolid" class="icon" /> TRUYỆN CỦA TÔI</span
-        >
-        <a href="myBook/newbook"><button>+ Thêm truyện mới</button></a>
-      </div>
-      <MyBook />
-    </div>
-  </div>
-</template>
-
-<style lang="scss" scoped>
 .wrapper {
   height: 80vh;
   width: 60vw;
@@ -56,4 +36,3 @@ span {
     cursor: pointer;
   }
 }
-</style>

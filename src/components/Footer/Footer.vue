@@ -51,41 +51,5 @@ import { images } from "@/assets/images/index";
 </template>
 
 <style scoped>
-.wrapper {
-  background-color: var(--color-background-footer);
-  border-top: 15px solid var(--color-secondary);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.info-section {
-  display: grid;
-  margin-bottom: 10px;
-  grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 50px;
-}
-p {
-  padding-top: 5px;
-}
-
-.info-bold {
-  font-weight: 700;
-}
-
-.icon {
-  padding: 5px;
-}
-.download-section {
-  padding-top: 40px;
-  width: 30%;
-  justify-content: space-between;
-  display: flex;
-}
-
-img {
-  object-fit: cover;
-  height: 50px;
-}
+@import url("./Footer.scss");
 </style>

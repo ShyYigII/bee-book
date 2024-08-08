@@ -1,5 +1,8 @@
 <script setup>
 import { icons } from "@/assets/images";
+import { useUserStore } from "@/stores/useUserStore";
+
+const user = useUserStore();
 </script>
 
 <template>
@@ -21,58 +24,12 @@ import { icons } from "@/assets/images";
         </div>
       </div>
       <span> <img :src="icons.penIconSolid" class="icon" />THÔNG TIN</span>
-      <p><b>Tên hiển thị:</b> Quân Nguyễn</p>
+      <p><b>Tên hiển thị:</b> {{ user.name }}</p>
       <p><b>Giới thiệu:</b> Chưa cập nhật</p>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-  height: 80vh;
-  width: 60vw;
-  background-color: #fff;
-  border-radius: 30px;
-}
-
-.inner {
-  height: 100%;
-  width: 100%;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-}
-span {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.archive {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 100px;
-  grid-column-gap: 20px;
-  margin-bottom: 30px;
-  margin-left: 50px;
-
-  .cell {
-    background-color: var(--color-author-background);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-
-  p {
-    font-weight: 600;
-    margin-left: 20px;
-  }
-}
-p {
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
+@import url("./AuthorProfile.scss");
 </style>

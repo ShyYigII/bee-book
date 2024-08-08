@@ -9,6 +9,7 @@ import panel from "@/assets/images/panel1.png";
 import panel2 from "@/assets/images/panel2.png";
 import panel3 from "@/assets/images/panel3.png";
 import panel4 from "@/assets/images/panel4.png";
+import upBook from "@/assets/images/up-book-competeed.png";
 
 import book1 from "@/assets/images/books-cover/1.jpeg";
 import book2 from "@/assets/images/books-cover/2.jpeg";
@@ -51,6 +52,7 @@ const images = {
   panel2,
   panel3,
   panel4,
+  upBook,
 };
 
 const books = {

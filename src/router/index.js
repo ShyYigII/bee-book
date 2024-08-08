@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LoginView from "@/views/LoginView.vue";
-import HomeView from "@/views/HomeView.vue";
+import LoginView from "@/views/LoginView/LoginView.vue";
+import HomeView from "@/views/HomeView/HomeView.vue";
 import AuthorProfileView from "@/views/AuthorView/AuthorProfileView.vue";
-import RegisterView from "@/views/RegisterView.vue";
-import EBookView from "@/views/EBookView.vue";
+import RegisterView from "@/views/LoginView/RegisterView.vue";
+import EBookView from "@/views/EBookView/EBookView.vue";
 import AuthorBookView from "@/views/AuthorView/AuthorBookView.vue";
 import AuthorNewBook from "@/views/AuthorView/AuthorNewBook.vue";
-import BookInfoView from "@/views/BookInfoView.vue";
-import BookReadView from "@/views/BookReadView.vue";
-import MyLibraryView from "@/views/MyLibraryView.vue";
+import BookInfoView from "@/views/BookView/BookInfoView/BookInfoView.vue";
+import BookReadView from "@/views/BookView/BookReadView/BookReadView.vue";
+import MyLibraryView from "@/views/MyLibraryView/MyLibraryView.vue";
+import ViewerLayout from "@/layouts/ViewerLayout.vue";
+import AuthorLayout from "@/layouts/AuthorLayout.vue";
 
 // const router = createRouter({
 //   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,7 +37,17 @@ const router = createRouter({
     {
       path: "/",
       name: "/",
-      component: HomeView,
+      component: ViewerLayout,
+      children: [
+        {
+          component: HomeView,
+          path: "",
+        },
+        {
+          component: BookInfoView,
+          path: "book/:bookId",
+        },
+      ],
     },
     {
       path: "/login",
@@ -48,45 +60,39 @@ const router = createRouter({
       component: RegisterView,
     },
     {
-      path: "/author/profile",
-      name: "authorProfile",
-      component: AuthorProfileView,
+      path: "/author",
+      name: "author",
+      component: AuthorLayout,
+      children: [
+        {
+          path: "profile",
+          name: "authorProfile",
+          component: AuthorProfileView,
+        },
+        {
+          path: "myBook",
+          name: "authorBook",
+          component: AuthorBookView,
+        },
+        {
+          path: "newbook",
+          component: AuthorNewBook,
+        },
+      ],
     },
+
     {
       path: "/ebook",
       name: "ebook",
       component: EBookView,
     },
-    {
-      path: "/author/myBook",
-      name: "authorBook",
-      component: AuthorBookView,
-      // children: [
-      //   {
-      //     path: "newBook",
-      //     name: "newBook",
-      //     component: AuthorNewBook,
-      //   },
-      // ],
-    },
-    {
-      path: "/author/mybook/newbook",
 
-      component: AuthorNewBook,
-    },
-    {
-      path: "/book/:bookId",
-
-      component: BookInfoView,
-    },
     {
       path: "/read/:bookId",
-
       component: BookReadView,
     },
     {
       path: "/myLibrary",
-
       component: MyLibraryView,
     },
   ],

@@ -1,9 +1,7 @@
 <script setup>
-import HeaderViewer from "@/components/HeaderViewer.vue";
-import Footer from "@/components/Footer.vue";
 import { books, images } from "@/assets/images";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faBookOpen, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { ref } from "vue";
 
@@ -19,14 +17,13 @@ const handleOpen = () => {
 </script>
 
 <template>
-  <HeaderViewer color="var(--color-secondary)" />
   <div class="content">
     <p><a href="/">Trang chủ</a> > {{ name }}</p>
     <div class="container">
       <div class="image"><img :src="books.book7" /></div>
       <div class="book-info">
         <h1>{{ name }}</h1>
-        <div class="star">
+        <!-- <div class="star">
           <p style="margin-right: 10px">5.0</p>
           <font-awesome-icon
             v-for="star in 5"
@@ -34,7 +31,8 @@ const handleOpen = () => {
             :icon="faStar"
             class="icon"
           />
-        </div>
+        </div> -->
+
         <div class="grid-3">
           <div>
             <p>Tác giả</p>
@@ -54,7 +52,8 @@ const handleOpen = () => {
             display: flex;
             align-items: center;
             margin-top: 10px;
-            width: 35%;
+            width: 40%;
+            margin-bottom: 20px;
           "
         >
           <p style="margin-right: 10px">Chọn loại sách</p>
@@ -64,7 +63,7 @@ const handleOpen = () => {
               background: #787171;
               border: none;
               margin-bottom: 0;
-              width: 50%;
+              width: 70%;
               text-align: center;
             "
           >
@@ -76,7 +75,7 @@ const handleOpen = () => {
             display: flex;
             align-items: center;
             margin-top: 10px;
-            width: 35%;
+            width: 45%;
           "
         >
           <p style="margin-right: 10px">Chọn nội dung</p>
@@ -123,6 +122,7 @@ const handleOpen = () => {
         </button>
       </div>
     </div>
+
     <div class="comment-rate">
       <h1>Độc giả nói gì vê {{ name }}</h1>
       <div>
@@ -158,7 +158,6 @@ const handleOpen = () => {
         </div>
       </div>
     </div>
-
     <p style="margin-top: 60px">Cùng tác giả</p>
     <div class="bookshelf">
       <div v-for="book in books1" :key="book.charAt(0)" class="compartment">
@@ -167,109 +166,8 @@ const handleOpen = () => {
       </div>
     </div>
   </div>
-  <Footer />
 </template>
 
 <style lang="scss" scoped>
-.content {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  padding: 40px 140px;
-}
-
-a {
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 4fr 6fr;
-  height: 80vh;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.image {
-  margin-right: 20px;
-
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.book-info {
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-.star {
-  display: flex;
-  margin-top: 10px;
-  .icon {
-    color: #ffd326;
-  }
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.fa-heart {
-  padding: 10px;
-  background: #000;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
-  margin: 10px 30px;
-
-  &:hover {
-  }
-}
-
-.comment-rate {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  align-self: flex-end;
-  margin-top: 20px;
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-.bookshelf {
-  padding: 10px 20px;
-  width: 80%;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin-bottom: 40px;
-
-  & p {
-    align-self: flex-start;
-    margin-top: 10px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    margin-left: 0;
-  }
-}
-
-.compartment {
-  height: 300px;
-
-  img {
-    height: 100%;
-    border-radius: 10px;
-  }
-}
+@import url("./BookInfoView.scss");
 </style>
